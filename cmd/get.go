@@ -24,7 +24,11 @@ var getNodesCmd = &cobra.Command{
 	Short: "List all available nodes",
 	Long:  `List all available nodes`,
 	Run: func(cmd *cobra.Command, args []string) {
-		client := global.NewClient()
+		client, err := global.NewClient()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
 		nodes, _ := client.GetNodes()
 
 		table := global.NewTable()
@@ -43,7 +47,11 @@ var getContainersCmd = &cobra.Command{
 	Short: "List all available containers",
 	Long:  `List all available containers`,
 	Run: func(cmd *cobra.Command, args []string) {
-		client := global.NewClient()
+		client, err := global.NewClient()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
 		containers, _ := client.GetContainers()
 
 		table := global.NewTable()

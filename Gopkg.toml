@@ -1,4 +1,16 @@
 [[constraint]]
+  name = "github.com/BurntSushi/toml"
+  version = "0.3.0"
+
+[[constraint]]
+  name = "github.com/olekukonko/tablewriter"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/mitchellh/go-homedir"
+  version = "1.0.0"
+
+[[constraint]]
   name = "github.com/pathfinder-cm/pathfinder-go-client"
   branch = "master"
 
@@ -9,10 +21,3 @@
 [prune]
   go-tests = true
 unused-packages = true
-[[constraint]]
-  branch = "master"
-  name = "github.com/olekukonko/tablewriter"
-
-[[constraint]]
-  name = "github.com/BurntSushi/toml"
-  version = "0.3.0"
