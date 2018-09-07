@@ -43,14 +43,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:fd9d1e633fdd5b3e61fcd4f2ce036c489bbd2be29e172d4637734ee535c3c509"
+  digest = "1:b107d85d3c348708c616cc8ba7af92a49ce99ebe646e58aa14ffb8e9611504a8"
   name = "github.com/pathfinder-cm/pathfinder-go-client"
   packages = [
     "ext",
     "pfmodel",
   ]
   pruneopts = "UT"
-  revision = "7ef71b86f3d55ea13de534eca06ca4dc0c952910"
+  revision = "9bb97e26cf646de096351c34eeeb7dd01bd6a62d"
 
 [[projects]]
   digest = "1:d867dfa6751c8d7a435821ad3b736310c2ed68945d05b50fb9d23aee0540c8cc"

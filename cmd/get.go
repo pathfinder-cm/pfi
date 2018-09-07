@@ -55,9 +55,9 @@ var getContainersCmd = &cobra.Command{
 		containers, _ := client.GetContainers()
 
 		table := global.NewTable()
-		table.SetHeader([]string{"Hostname", "Ipaddress", "Image", "Status"})
+		table.SetHeader([]string{"Hostname", "Ipaddress", "Image", "Node", "Status"})
 		for _, container := range *containers {
-			table.Append([]string{container.Hostname, container.Ipaddress, container.Image, container.Status})
+			table.Append([]string{container.Hostname, container.Ipaddress, container.Image, container.NodeHostname, container.Status})
 		}
 		fmt.Println()
 		table.Render()
