@@ -24,10 +24,13 @@ func NewClient() (ext.Client, error) {
 		},
 	}
 	paths := map[string]string{
-		"GetNodes":      "api/v1/ext_app/nodes",
-		"GetNode":       "api/v1/ext_app/nodes",
-		"GetContainers": "api/v1/ext_app/containers",
-		"GetContainer":  "api/v1/ext_app/container",
+		"GetNodes":            "api/v1/ext_app/nodes",
+		"GetNode":             "api/v1/ext_app/nodes",
+		"GetContainers":       "api/v1/ext_app/containers",
+		"GetContainer":        "api/v1/ext_app/containers",
+		"CreateContainer":     "api/v1/ext_app/containers",
+		"DeleteContainer":     "api/v1/ext_app/containers",
+		"RescheduleContainer": "api/v1/ext_app/containers",
 	}
 	return ext.NewClient(p.Cluster, p.Token, h, p.Server, paths), nil
 }
