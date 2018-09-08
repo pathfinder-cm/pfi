@@ -12,3 +12,17 @@ install:
 
 script:
   - go test ./...
+  - GOOS=linux GOARCH=amd64 go build -ldflags "-X main.Commit=${TRAVIS_COMMIT} -X main.Build=$(date +%Y%m%d) -s -w" -o pfi-linux
+  - GOOS=darwin GOARCH=amd64 go build -ldflags "-X main.Commit=${TRAVIS_COMMIT} -X main.Build=$(date +%Y%m%d) -s -w" -o pfi-darwin
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key: $GITHUB_TOKEN
+  file:
+    - pfi-linux
+    - pfi-darwin
+  on:
+    tags: true
+    repo: pathfinder-cm/pfi
+    all_branches: true
