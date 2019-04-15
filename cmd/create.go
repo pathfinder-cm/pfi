@@ -12,7 +12,7 @@ var Image string
 func init() {
 	rootCmd.AddCommand(createCmd)
 	createCmd.AddCommand(createContainerCmd)
-	createCmd.Flags().StringVarP(&Image, "image", "i", "18.04", "Image that pathfinder will use to create the container")
+	createContainerCmd.Flags().StringVarP(&Image, "image", "i", "18.04", "Image that pathfinder will use to create the container")
 }
 
 var createCmd = &cobra.Command{
